@@ -1,8 +1,20 @@
-import math
+#PYTHON Calculator
 
-#calculate the hypothenus of a triangle
+operator = input("Enter an operator of your choice (+,//,/,-,*): ")
+number1 = float(input("Enter your first number: "))
+number2 = float(input("Enter your second number: "))
 
-a = int(input("Please enter the angle of the first sight: "))
-b = int(input("Please enter the angle of the second sight: "))
-hypothesis = math.sqrt(math.pow(a,2)+math.pow(b,2))
-print(f"The hypothenus of the triangle is  {round(hypothesis, 2)}")
+if operator == "+":
+    print(number1 + number2)
+elif operator == "-":
+    print(number1 - number2)
+elif operator == "*":
+    print(number1 * number2)
+elif operator == "/":
+    print(round(number1 / number2, 3))
+elif operator == "//":
+    print(round(number1 // number2))
+elif operator != "-" and operator == "//":
+    print(round,(number1 % number2, 3))
+else:
+    print("Invalid operator")
