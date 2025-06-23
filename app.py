@@ -1,13 +1,14 @@
-#python currency converter
+username = str(input("Enter your username: "))
 
-currency = int(input("How much do you want to convert? : "))
-convert = input("From which currency do you want to convert from USD or Euro?: ")
+username.find(" ")
 
-if convert == "Euro":
-    amount = currency * 1.15
-    print(f"The converted amount from Euros is {amount}usd.")
-elif convert == "USD":
-    amount = currency * 0.87
-    print(f"The converted amount from USD is {amount}euro.")
+username.isalpha()
+
+if len(username) > 12:
+    print("Please input a maximum of 12 characters")
+elif not username.find(" ") == -1:
+    print("Please there should be no spaces")
+elif not username.isalpha():
+    print("Please no digits")
 else:
-    print(f"You gave a wrong currency for your exchange!")
+    print(username)
