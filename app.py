@@ -16,7 +16,7 @@ else:
 
 # python quiz
 
-questions = ("What is the highest mountain in the world?",
+'''questions = ("What is the highest mountain in the world?",
              "what is the coldest place in the world?",
              "what is the biggest land animal in the world?",
              "Most spoken language inthe world?",
@@ -67,3 +67,53 @@ print()
 
 score = int(score / len(questions) * 100)
 print(f"Your score is {score}%")
+'''
+
+
+'''
+#dictionary
+
+capitals = {"Cameroon": "Yaounde",
+            "Japan": "Tokyo",
+            "USA": "Washington",}
+
+
+#capitals.update({"Germany": "Berlin"})
+#capitals.update({"USA": "New York"})
+#capitals.popitem()
+items = capitals.items()
+print(items) '''
+
+
+#Concession stand program
+
+menu = {"mango":200,
+        "apple":150,
+        "popcorn":100,
+        "fries":50,
+        "pizza": 250
+        }
+
+cart = []
+total = 0
+
+print("--------------MENU------")
+for key, value in menu.items():
+    print(f"{key}: ${value: .2f}")
+print ("------------------")
+
+while True:
+    food = input("Select an item(q to quit): ").lower()
+    if food == "q":
+        break
+    elif menu.get(food) is not None:
+        cart.append(food)
+
+for food in cart:
+    total += menu.get(food)
+    print(food, end=" ")
+
+print()
+print(f"Your total amount is ${total: .2f}")
+
+print(cart)
