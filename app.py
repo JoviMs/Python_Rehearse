@@ -129,10 +129,27 @@ highest_num = 100
 answer =  random.randint(lowest_num, highest_num)
 
 print("----------GUESS THE ANSWER----------")
-player1 = int(input("Please guess your first number: "))
-player2 = int(input("Please guess your second number: "))
+player1 = (input(f"Please guess your first number between {lowest_num} and {highest_num}: "))
+player2 = (input(f"Please guess your second number between {lowest_num} and {highest_num}: "))
+if player1.isdigit() and player2.isdigit():
+    pass
+else:
+    print("Invalid input")
+    print(f"Your number should be a digit from {lowest_num} to {highest_num}!")
+
+player1 = int(input(f"Please guess your first number between {lowest_num} and {highest_num}: "))
+player2 = int(input(f"Please guess your second number between {lowest_num} and {highest_num}: "))
+
+if player1 < lowest_num and player2 < lowest_num:
+    print("Too low!")
+else:
+    print("Too high!")
+
+    player1 = int(input(f"Please guess your first number between {lowest_num} and {highest_num}: "))
+    player2 = int(input(f"Please guess your second number between {lowest_num} and {highest_num}: "))
+
 if player1 == answer or player2 == answer:
-    print("Correct! you guess the average number!")
+    print("Correct! you guess the exact number!")
 else:
     print(f"Incorrect! both of your guesses was {player1} and {player2} which is not it. !")
 print(answer)
