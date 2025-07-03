@@ -84,7 +84,7 @@ capitals = {"Cameroon": "Yaounde",
 items = capitals.items()
 print(items) '''
 
-
+'''
 #Concession stand program
 
 menu = {"mango":200,
@@ -102,6 +102,7 @@ for key, value in menu.items():
     print(f"{key}: ${value: .2f}")
 print ("------------------")
 
+
 while True:
     food = input("Select an item(q to quit): ").lower()
     if food == "q":
@@ -116,4 +117,22 @@ for food in cart:
 print()
 print(f"Your total amount is ${total: .2f}")
 
-print(cart)
+print(cart) '''
+
+
+#random guessing game
+
+import random
+
+lowest_num = 1
+highest_num = 100
+answer =  random.randint(lowest_num, highest_num)
+
+print("----------GUESS THE ANSWER----------")
+player1 = int(input("Please guess your first number: "))
+player2 = int(input("Please guess your second number: "))
+if player1 == answer or player2 == answer:
+    print("Correct! you guess the average number!")
+else:
+    print(f"Incorrect! both of your guesses was {player1} and {player2} which is not it. !")
+print(answer)
