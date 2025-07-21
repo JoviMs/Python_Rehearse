@@ -119,7 +119,7 @@ print(f"Your total amount is ${total: .2f}")
 
 print(cart) '''
 
-
+'''
 #random guessing game
 
 import random
@@ -152,4 +152,14 @@ if player1 == answer or player2 == answer:
     print("Correct! you guess the exact number!")
 else:
     print(f"Incorrect! both of your guesses was {player1} and {player2} which is not it. !")
-print(answer)
+print(answer) '''
+
+def weekend_days(day):
+    match day:
+        case "saturday":
+            return True
+        case "sunday":
+            return True
+        case "monday":
+            return False
+print(weekend_days("saturday"))
