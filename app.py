@@ -156,10 +156,8 @@ print(answer) '''
 
 def weekend_days(day):
     match day:
-        case "saturday":
+        case "saturday" | "sunday":
             return True
-        case "sunday":
-            return True
-        case "monday":
+        case "monday" | "tuesday" | "wednesday" | "thursday" | "friday" :
             return False
-print(weekend_days("saturday"))
+print(weekend_days("friday"))
