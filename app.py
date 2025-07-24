@@ -12,7 +12,8 @@ elif not username.isalpha():
     print("Please no digits")
 else:
     print(username) '''
-
+from selectors import SelectSelector
+from sys import modules
 
 # python quiz
 
@@ -154,10 +155,71 @@ else:
     print(f"Incorrect! both of your guesses was {player1} and {player2} which is not it. !")
 print(answer) '''
 
-def weekend_days(day):
-    match day:
-        case "saturday" | "sunday":
-            return True
-        case "monday" | "tuesday" | "wednesday" | "thursday" | "friday" :
-            return False
-print(weekend_days("friday"))
+#Banking app
+def show_balance(balance):
+    print("&&&&&&&&&&&&&&&&&&&&&&&&&")
+    print(f"Your balance is ${balance: .2f}")
+    print("&&&&&&&&&&&&&&&&&&&&&&&&&")
+
+def deposit():
+    amount = float(input("How much do you want to deposit: "))
+    if amount < 0:
+        print("&&&&&&&&&&&&&&&&&&&&&&&&&")
+        print("You cannot deposit negative amounts, have some shame!")
+        print("&&&&&&&&&&&&&&&&&&&&&&&&&")
+        return 0
+    else:
+        return amount
+
+def withdraw(balance):
+    amount = float(input("How much do you want to withdraw: "))
+
+    if amount > balance:
+        print("&&&&&&&&&&&&&&&&&&&&&&&&&")
+        print("You cannot withdraw more than your balance!")
+        print("&&&&&&&&&&&&&&&&&&&&&&&&&")
+    elif amount < 0:
+
+        print("&&&&&&&&&&&&&&&&&&&&&&&&&")
+        print("You cannot withdraw negative amounts, what happen to your way of thinking!")
+        print("&&&&&&&&&&&&&&&&&&&&&&&&&")
+        return 0
+    else:
+        return amount
+
+def main():
+    balance = 0
+    is_running = True
+
+    while is_running:
+        print("*****************************")
+        print("        Banking Program      ")
+        print("*****************************")
+        print("Banking program")
+        print("1.Show Balance")
+        print("2.Deposit")
+        print("3.Withdraw")
+        print("4.Exit")
+        print("******************************")
+
+        choice = input("Enter your choice (1-4): ")
+
+        if choice == "1":
+            show_balance(balance)
+        elif choice == "2":
+            balance += deposit()
+        elif choice == "3":
+            balance -= withdraw()
+        elif choice == "4":
+            is_running = False
+        else:
+            print("**********************")
+            print("That is an invalid amount!")
+            print("**********************")
+
+    print("&&&&&&&&&&&&&&&&&&&&&&&&&")
+    print("Thank you and have a nice day!")
+    print("&&&&&&&&&&&&&&&&&&&&&&&&&")
+
+if __name__ == '__main__':
+    main()
