@@ -155,6 +155,7 @@ else:
     print(f"Incorrect! both of your guesses was {player1} and {player2} which is not it. !")
 print(answer) '''
 
+'''
 #Banking app
 def show_balance(balance):
     print("&&&&&&&&&&&&&&&&&&&&&&&&&")
@@ -222,4 +223,79 @@ def main():
     print("&&&&&&&&&&&&&&&&&&&&&&&&&")
 
 if __name__ == '__main__':
+    main()
+'''
+import random
+
+def spin_row():
+    symbols = ['🍓', '🍌', '🍎', '🥑', '🧅']
+
+    return [random.choice(symbols) for _ in range(3)]
+
+
+def print_row(row):
+    print("*************")
+    print(" | " .join(row))
+    print("*************")
+
+def get_payout(row, bet):
+    if row[0] == row[1] ==row[2]:
+        if row[0] == '🍓':
+            return bet * 3
+        elif row[0] == '🍌':
+            return bet * 5
+        elif row[0] == '🥑':
+            return bet * 6
+        elif row[0] == '🧅':
+            return bet * 10
+    return 0
+
+def main():
+    balance = 100
+    print("*********************")
+    print("Welcome to game slots")
+    print("Symbols: 🍓 🍌 🍎 🥑 🧅")
+    print("*********************")
+
+    while balance > 0:
+        print(f"Your balance is ${balance: .2f}")
+
+        bet = input("How much do you want to bet: ")
+        if not bet.isdigit():
+            print("Please enter a number.")
+            continue
+
+        bet = int(bet)
+
+        if bet > balance:
+            print("Insufficient balance!")
+            continue
+        if bet <= 0:
+            print("Please enter a positive number.")
+            continue
+
+        balance -= bet
+
+        row = spin_row()
+        print("Spinning...\n")
+        print_row(row)
+
+        payout = get_payout(row, bet)
+
+        if payout > 0:
+            print(f"You won ${payout: .2f}")
+        else:
+            print("Sorry, you didn't win anything.")
+
+        balance += payout
+
+        play_again = input("Would you like to play again? (y/n): ")
+        if play_again == "y":
+            break
+        print("********************************")
+        print(f"Your balance is ${balance: .2f}")
+        print("********************************")
+
+
+if __name__ == "__main__":
     main()
