@@ -12,8 +12,8 @@ elif not username.isalpha():
     print("Please no digits")
 else:
     print(username) '''
-from selectors import SelectSelector
-from sys import modules
+# from selectors import SelectSelector
+# wfrom sys import modules
 
 # python quiz
 
@@ -120,7 +120,7 @@ print(f"Your total amount is ${total: .2f}")
 
 print(cart) '''
 
-'''
+
 #random guessing game
 
 import random
@@ -153,7 +153,7 @@ if player1 == answer or player2 == answer:
     print("Correct! you guess the exact number!")
 else:
     print(f"Incorrect! both of your guesses was {player1} and {player2} which is not it. !")
-print(answer) '''
+print(answer)
 
 '''
 #Banking app
@@ -335,6 +335,7 @@ print (f"original message: {cipher_text}")
 print(f"encrypted message: {plain_text}")
 '''
 
+'''
 #hangman
 from wordlist import words
 import random
@@ -411,4 +412,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main()  '''
