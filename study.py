@@ -35,9 +35,11 @@ else:
     print("Low Consumption!")  '''
 
 
+
 scores = [45, 78, 92, 61, 55, 88, 73]
-for score in scores:
-    if score >= 60:
-        print(score, "-", "Pass")
-    else:
-     print(score, "-", "Fail")        
+print("Total:" ,sum(scores))
+average = sum(scores) / len(scores)
+print("Average:",(round(average, 2)))
+print("Maximum:",max(scores))
+print("Minimum:",min(scores))
+print("Number of scores:",len(scores)) 
