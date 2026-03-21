@@ -1,16 +1,35 @@
-def calculate_grade(score):
-    if score >= 90:
-        return("A")
-    elif score > 80 and score <= 89:
-        return("B")
-    elif score > 70 and score <= 79:
-        return("C")
-    elif score > 60 and score <= 69:
-        return("D")
-    else:
-        return("Fail")
+'''
+#Discount Calculation
+def calculate_discount(price, discount_percentage):
+    discount = price * discount_percentage / 100
+    final_price = price - discount
+    return final_price;    
 
-score = int(input("Please enter your score: "))
-Result = calculate_grade(score)
-print("Your grade is:" ,Result)
-                    
+UserOrig = int(input(" Please enter the original price: "))
+UserDis = int(input("Please enter the discount percentage: "))
+
+discount = calculate_discount(UserOrig,UserDis)
+print("Your discounted price is:" ,discount)
+
+if discount >= 500:
+     print("Premium purchase!")    
+elif discount >= 100 and discount <= 500:
+        print("Mid-range purchase!")
+else:
+        print("Budget Purchase!") '''
+
+def calculate_electricity_bill(units_used):
+    bill = units_used * 0.50
+    return bill;
+
+User = int(input("Please how many units of electricity used: "))
+
+bill = calculate_electricity_bill(User)
+print("Your electricity bill is:" ,bill)
+
+if bill > 100:
+    print("High Consumption!")
+elif bill >= 50 and bill <=100:
+    print("Moderate Consumption!")
+else:
+    print("Low Consumption!")         
