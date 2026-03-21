@@ -16,7 +16,7 @@ if discount >= 500:
 elif discount >= 100 and discount <= 500:
         print("Mid-range purchase!")
 else:
-        print("Budget Purchase!") '''
+        print("Budget Purchase!")
 
 def calculate_electricity_bill(units_used):
     bill = units_used * 0.50
@@ -32,4 +32,12 @@ if bill > 100:
 elif bill >= 50 and bill <=100:
     print("Moderate Consumption!")
 else:
-    print("Low Consumption!")         
+    print("Low Consumption!")  '''
+
+
+scores = [45, 78, 92, 61, 55, 88, 73]
+for score in scores:
+    if score >= 60:
+        print(score, "-", "Pass")
+    else:
+     print(score, "-", "Fail")        
