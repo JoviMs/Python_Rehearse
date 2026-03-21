@@ -32,10 +32,10 @@ if bill > 100:
 elif bill >= 50 and bill <=100:
     print("Moderate Consumption!")
 else:
-    print("Low Consumption!")  '''
+    print("Low Consumption!")  
 
 
-
+#Day 5 - list built in functions sum average max min"
 scores = [45, 78, 92, 61, 55, 88, 73]
 print("Total:" ,sum(scores))
 average = sum(scores) / len(scores)
@@ -43,3 +43,19 @@ print("Average:",(round(average, 2)))
 print("Maximum:",max(scores))
 print("Minimum:",min(scores))
 print("Number of scores:",len(scores)) 
+
+students = ["John","Amara","David","Sarah","James"]
+
+for index, student in enumerate(students):
+    print(index+1, "-" , student) '''
+
+prices = [120, 45, 200, 89, 34, 156, 78]
+def apply_discount(price,discount):
+    discounted = price * discount / 100
+    final_price = price - discounted
+    return final_price;
+
+for index, price in enumerate(prices):  
+ Total = apply_discount(price,10)   
+ print(index+1, ": original = " ,price, "discounted = " ,Total)
+  
