@@ -58,8 +58,8 @@ def apply_discount(price,discount):
 for index, price in enumerate(prices):  
  Total = apply_discount(price,10)   
  print(index+1, ": original = " ,price, "discounted = " ,Total)
-  '''
-
+  
+#"Day 6 - temperatures list revision"
 temperatures = [32, 45, 28, 67, 51, 39, 72]
 print(max(temperatures))  
 print(min(temperatures))
@@ -70,4 +70,14 @@ for temp in temperatures:
  if temp >= 50:
     print(temp, "-", "Hot")
  else:
-    print(temp, "-", "Cold")    
+    print(temp, "-", "Cold") '''
+
+names = ["Alice", "Bob", "Charlie", "David", "Eve"]
+#print(len(names))
+Name = str(input("Please enter your name: "))
+if Name in names:
+    print(Name,"is in the list!")
+else:
+    print(Name ,"is not in the list!")    
+    names.append(Name)
+print(names)
