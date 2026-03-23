@@ -47,8 +47,8 @@ print("Number of scores:",len(scores))
 students = ["John","Amara","David","Sarah","James"]
 
 for index, student in enumerate(students):
-    print(index+1, "-" , student) '''
-
+    print(index+1, "-" , student) 
+#"Day 5 - discount calculator with lists and functions"
 prices = [120, 45, 200, 89, 34, 156, 78]
 def apply_discount(price,discount):
     discounted = price * discount / 100
@@ -58,4 +58,16 @@ def apply_discount(price,discount):
 for index, price in enumerate(prices):  
  Total = apply_discount(price,10)   
  print(index+1, ": original = " ,price, "discounted = " ,Total)
-  
+  '''
+
+temperatures = [32, 45, 28, 67, 51, 39, 72]
+print(max(temperatures))  
+print(min(temperatures))
+total = round (sum(temperatures) / len(temperatures), 2)
+print(total)
+
+for temp in temperatures:
+ if temp >= 50:
+    print(temp, "-", "Hot")
+ else:
+    print(temp, "-", "Cold")    
