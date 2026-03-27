@@ -92,21 +92,16 @@ def classify_number(number):
        return "Even"
     else:
        return "Odd"    
-for index, number in enumerate(numbers):
-    num = classify_number(number)
-    print(index+1, number,"-", num)
-
-even_count = 0      # ← before the loop
-odd_count = 0       # ← before the loop
+even_count = 0      
+odd_count = 0       
 
 for index, number in enumerate(numbers):
     num = classify_number(number)
     print(index+1, number, "-", num)
     if num == "Even":
-        even_count = even_count + 1    # ← add 1
+        even_count = even_count + 1    
     else:
-        odd_count = odd_count + 1     # ← add 1
+        odd_count = odd_count + 1  
 
-# after the loop
 print("Total Even:", even_count)
 print("Total Odd:", odd_count)
