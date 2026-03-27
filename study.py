@@ -70,14 +70,43 @@ for temp in temperatures:
  if temp >= 50:
     print(temp, "-", "Hot")
  else:
-    print(temp, "-", "Cold") '''
-
+    print(temp, "-", "Cold") 
+#"Day 6 - names list with in keyword and append"
 names = ["Alice", "Bob", "Charlie", "David", "Eve"]
-#print(len(names))
+print(len(names))
 Name = str(input("Please enter your name: "))
 if Name in names:
     print(Name,"is in the list!")
 else:
     print(Name ,"is not in the list!")    
     names.append(Name)
-print(names)
+print(names) 
+'''
+
+from itertools import count
+
+
+numbers = [15, 42, 8, 93, 27, 64, 31, 55]
+def classify_number(number):
+    if number % (2) == 0:
+       return "Even"
+    else:
+       return "Odd"    
+for index, number in enumerate(numbers):
+    num = classify_number(number)
+    print(index+1, number,"-", num)
+
+even_count = 0      # ← before the loop
+odd_count = 0       # ← before the loop
+
+for index, number in enumerate(numbers):
+    num = classify_number(number)
+    print(index+1, number, "-", num)
+    if num == "Even":
+        even_count = even_count + 1    # ← add 1
+    else:
+        odd_count = odd_count + 1     # ← add 1
+
+# after the loop
+print("Total Even:", even_count)
+print("Total Odd:", odd_count)
