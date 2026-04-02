@@ -119,14 +119,26 @@ print(person["city"])
 print(person["name"])
 person["language"] = "French"
 for key in person.keys():
-    print(key) '''
+    print(key) 
 
 phone_book = {
     "Amanda" : 2371234567,
     "Brandon" : 3210987565,
     "Carl" : 6752982013
 }
-#for person in phone_book.values():
- #   print(person)
+for person in phone_book.values():
+    print(person)
 print("Alice" in phone_book)
-#del phone_book["Amanda"]
+del phone_book["Amanda"] '''
+
+grades = {
+    "mathematics": 90,
+    "Physics": 70,
+    "Chemistry": 68,
+    "Computer": 80
+}
+for key, value in grades.items():
+    print(key, value)
+grades["Further maths"] = 95
+grades["Computer"] = 85
+print(grades)
