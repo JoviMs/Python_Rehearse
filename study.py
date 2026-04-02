@@ -81,8 +81,8 @@ else:
     print(Name ,"is not in the list!")    
     names.append(Name)
 print(names) 
-'''
 
+#"Day  - classify numbers with even odd counter"
 from itertools import count
 
 
@@ -104,4 +104,29 @@ for index, number in enumerate(numbers):
         odd_count = odd_count + 1  
 
 print("Total Even:", even_count)
-print("Total Odd:", odd_count)
+print("Total Odd:", odd_count) 
+
+
+#Dictionaries
+person = {
+    "name": "Jovi",
+    "age": 25,
+    "city": "Deggendorf"
+}
+
+print(person["age"])
+print(person["city"])
+print(person["name"])
+person["language"] = "French"
+for key in person.keys():
+    print(key) '''
+
+phone_book = {
+    "Amanda" : 2371234567,
+    "Brandon" : 3210987565,
+    "Carl" : 6752982013
+}
+#for person in phone_book.values():
+ #   print(person)
+print("Alice" in phone_book)
+#del phone_book["Amanda"]
