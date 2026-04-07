@@ -146,17 +146,18 @@ print(grades)
 def long_words(words):
     for word in words:
         if len(word) > 4:
-            print(word) '''
-
-
-
-
-
-
-
+            print(word) 
+#list even numbers            
 def list_numbers(numbers):    
     result = []               
     for number in numbers:
         if number % 2 == 0 :   
             result.append(number) 
-    return result           
+    return result '''
+
+
+
+def list_students(students):
+    for key,value in students.items():
+       if value > 50:
+         print(key)        
