@@ -129,7 +129,7 @@ phone_book = {
 for person in phone_book.values():
     print(person)
 print("Alice" in phone_book)
-del phone_book["Amanda"] '''
+del phone_book["Amanda"] 
 
 grades = {
     "mathematics": 90,
@@ -142,3 +142,21 @@ for key, value in grades.items():
 grades["Further maths"] = 95
 grades["Computer"] = 85
 print(grades)
+
+def long_words(words):
+    for word in words:
+        if len(word) > 4:
+            print(word) '''
+
+
+
+
+
+
+
+def list_numbers(numbers):    
+    result = []               
+    for number in numbers:
+        if number % 2 == 0 :   
+            result.append(number) 
+    return result           
