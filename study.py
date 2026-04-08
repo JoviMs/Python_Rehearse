@@ -153,11 +153,25 @@ def list_numbers(numbers):
     for number in numbers:
         if number % 2 == 0 :   
             result.append(number) 
-    return result '''
+    return result 
 
-
-
+students = {
+    "Junior": 85, "Bob": 40, "Alice": 72, "Tom": 30, "Niba":20, "Kimbo":49, "Jovi":90
+    }
+for key,value in students.items():
+    if value > 50:
+        print(key)               
+#as a function
 def list_students(students):
-    for key,value in students.items():
-       if value > 50:
-         print(key)        
+    result = []
+    for key, value in students.items():
+        if value > 50:
+            result.append(key)
+    return result         '''
+
+def list_products(products):
+    result = {}               
+    for key, value in products.items():
+        if value < 100:
+            result[key] = value  # add the whole pair
+    return result
