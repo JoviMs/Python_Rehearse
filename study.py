@@ -167,11 +167,80 @@ def list_students(students):
     for key, value in students.items():
         if value > 50:
             result.append(key)
-    return result         '''
+    return result         
 
-def list_products(products):
+def names_students(names):
     result = {}               
-    for key, value in products.items():
-        if value < 100:
-            result[key] = value  # add the whole pair
-    return result
+    for key, value in names.items():
+        result[key] = value + 10
+    return result 
+
+
+
+
+def list_word(wordss):
+    for word in words:
+        if number % 2 == 0:
+            result.append(number)
+    Average = sum(numbers) / len(numbers)            
+    return Average'''
+
+'''
+#explaining threads changing to process, about heaps
+from threading import Thread
+from multiprocessing import Process, Queue
+import time, random
+num_threads = 2
+my_thread = []
+my_common_list = []
+q = Queue
+
+def my_calc(x):
+    sum = 0
+    for i in range(x)
+    sum = sum + 1
+
+def add_list_item(x, q):
+    for i in range(10):
+        #my_common_list.append(str(x)+"-"+str(i))
+        q.put([x,i])
+        time.sleep(random.randint(1,5) * 0.1)
+
+def get_q_items(x,q):
+    while True:
+        msg = q.get()
+        print(msg)
+
+start = time.time()
+
+for i in range(num_threads):
+    #my_thread.append(Thread(target=my_calc, args(10000000)))
+    my_thread.append(Process(target=my_calc, args(i, q))) '''
+
+
+# create two agents that cann communicate through a queue (EXAMS VIBE)
+import queue
+import threading
+import time
+
+
+def agent1(q):
+    for i in range(5):
+        q.put(f"Message {i} from Agent 1")
+        time.sleep(1)
+
+
+def agent2(q):
+    for i in range(5):
+        message = q.get()
+        print(f"Agent 2 received: {message}")
+        time.sleep(1)
+
+
+q = queue.Queue()
+t1 = threading.Thread(target=agent1, args=(q,))
+t2 = threading.Thread(target=agent2, args=(q,))
+t1.start()
+t2.start()
+t1.join()
+t2.join()
