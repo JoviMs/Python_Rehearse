@@ -1,6 +1,5 @@
 import cv2
 import os
-import numpy as np
 
 '''
 #for images
@@ -35,7 +34,8 @@ while True:
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-'''
+
+#Basic function (know different way to show the colour of an image)
 kernel = np.ones((5, 5), np.uint8)
 # print(kernel)
 
@@ -56,4 +56,19 @@ cv2.imshow("Cann",  canny)
 cv2.imshow("Blur", bluring)
 cv2.imshow("mine", mine)
 cv2.imshow("lola", dilation)
+cv2.waitKey(0) '''
+
+# Cropping and Resizing images
+script_dir = os.path.dirname(os.path.abspath(__file__))
+path = os.path.join(script_dir, "Resources", "Road_in_Norway.jpg")
+
+img = cv2.imread(path)
+# print(img.shape) ---Gives you the shape of your image (height,width,number of channel bgr)
+img = cv2.resize(img, (600, 500))
+# corpping in a car shape view, viewing at lanes (height, width)
+imgCrop = img[300:440, 210:470]  # staying on lane
+
+
+cv2.imshow('Road', img)
+cv2.imshow('Roadcrop', imgCrop)
 cv2.waitKey(0)
